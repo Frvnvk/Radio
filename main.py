@@ -67,12 +67,28 @@ async def play(ctx, *, name):
     ctx.voice_client.play(source)
     await ctx.send(f"▶️ Gra {name.capitalize()}")
 
-# Skróty komend:
-@bot.command() async def eska(ctx): await play(ctx, name="eska")
-@bot.command() async def rmf_fm(ctx): await play(ctx, name="rmf-fm")
-@bot.command() async def rmf_maxx(ctx): await play(ctx, name="rmf-maxx")
-@bot.command() async def vox_fm(ctx): await play(ctx, name="vox-fm")
-@bot.command() async def zet(ctx): await play(ctx, name="zet")
-@bot.command() async def melo_radio(ctx): await play(ctx, name="melo-radio")
+@bot.command()
+async def eska(ctx):
+    await play(ctx, name="eska")
+
+@bot.command()
+async def rmf_fm(ctx):
+    await play(ctx, name="rmf-fm")
+
+@bot.command()
+async def rmf_maxx(ctx):
+    await play(ctx, name="rmf-maxx")
+
+@bot.command()
+async def vox_fm(ctx):
+    await play(ctx, name="vox-fm")
+
+@bot.command()
+async def zet(ctx):
+    await play(ctx, name="zet")
+
+@bot.command()
+async def melo_radio(ctx):
+    await play(ctx, name="melo-radio")
 
 bot.run(os.getenv("DISCORD_TOKEN"))
