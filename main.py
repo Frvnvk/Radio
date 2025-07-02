@@ -91,4 +91,4 @@ async def zet(ctx):
 async def melo_radio(ctx):
     await play(ctx, name="melo-radio")
 
-bot.run(R95pG7uNrADou6yMos0O2CkEGFvp0JtK)
+bot.run(os.getenv("DISCORD_TOKEN"))
